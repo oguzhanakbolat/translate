@@ -1,0 +1,138 @@
+.textAreaContainer {
+	display: flex;
+	width: 80%;
+	border: 1px solid #ddd;
+	margin-top: 50px;
+	min-height: 250px;
+	border-radius: 10px;
+	flex-direction: row;
+	
+	.column {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+
+		.header {
+			flex: 1;
+			height: 48px;
+			border-bottom: 1px solid #ddd; 
+			flex-direction: row;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+
+			span {
+				padding: 15px;
+				font-size: 14px;
+				font-weight: 500;
+			}
+
+			.icon {
+				display: flex;
+				width: 46px;
+				height: 46px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+				transition: all 300ms;
+
+				&.turn {
+					transform: rotate(90deg);
+				}
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: -1px;
+				background-color: #fff;
+				position: absolute;
+				right: 0;
+				top: 48px;
+				width:  calc(100% + 2px);
+				border: 1px solid #ddd;
+				border-radius: 0 0 10px 10px;
+				overflow: hidden;
+				z-index: 1;
+
+				li {
+					padding: 10px 15px;
+					cursor: pointer;
+
+					&:hover {
+						background-color: #eee;
+					}
+				}
+			}
+		}
+		
+		.textArea {
+			flex: 1;
+			min-height: 245px;
+			padding: 15px 15px 55px 15px;
+			border-left: 1px solid #ddd;
+			position: relative;
+			
+			.input {
+				width: 100%;
+				outline: none;
+				min-height: 172px;
+				border: none;
+				color: #555;
+				flex: 1;
+				font-family: inherit;
+				overflow: auto hidden;
+				padding: 0;
+				resize: none;
+				white-space: pre-wrap;
+				z-index: 1;
+				font-size: 24px;
+    			line-height: 32px;
+			}
+
+			.close {
+				display: flex;
+				position: absolute;
+				top: 8px;
+				right: 0px;
+				width: 48px;
+				height: 48px;
+				border-radius: 24px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #eee;
+				}
+			}
+
+			.microphone {
+				display: flex;
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				width: 48px;
+				height: 48px;
+				border-radius: 24px;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+
+				&.active {
+					background-color: #ffd0d9;
+				}
+
+				&:hover {
+					background-color: #eee;
+				}
+			}
+		}
+
+		&:first-child {
+			.textArea {
+				border: none;
+			}
+		}
+	}
+}

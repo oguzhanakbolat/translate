@@ -1,0 +1,16 @@
+.App {
+  min-height: 100%;
+  height: auto;
+
+  header {
+    height: 64px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
